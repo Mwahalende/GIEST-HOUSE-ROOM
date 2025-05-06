@@ -136,7 +136,7 @@ const io = new Server(server);
 const port = 3000;
 
 // MongoDB Connection
-mongoose.connect(""mongodb+srv://user1:malafiki@leodb.5mf7q.mongodb.net/?retryWrites=true&w=majority&appName=leodb")
+mongoose.connect("mongodb+srv://user1:malafiki@leodb.5mf7q.mongodb.net/?retryWrites=true&w=majority&appName=leodb")
   .then(() => console.log('✅ MongoDB connected'))
   .catch(err => console.log('❌ DB connection error:', err));
 
