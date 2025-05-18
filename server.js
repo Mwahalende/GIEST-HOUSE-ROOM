@@ -163,7 +163,9 @@ function generateOTP() {
 
 // Mailer setup
 const transporter = nodemailer.createTransport({
-  service: "gmail",
+  host: 'smtp.gmail.com',
+  port: 465,
+  secure: true, 
   auth: {
     user: "zumalipas@gmail.com",
     pass: "xsds bimk ndlb vmrr", // Replace with your email password
@@ -173,6 +175,17 @@ const transporter = nodemailer.createTransport({
   socketTimeout: 10000,
 });
 
+// Email Setup
+const transporter = nodemailer.createTransport({
+  host: 'smtp.gmail.com',
+  port: 465,
+  secure: true, // true for 465, false for 587
+  auth: {
+ 
+    user: "leotitogalaxy@gmail.com",
+    pass: "anxd ruea situ btug", 
+  }
+});
 // WebSocket connection
 io.on('connection', socket => {
   console.log('📡 WebSocket client connected');
